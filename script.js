@@ -2,27 +2,24 @@ https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&no
 
 var FLICKR_API_URL = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key='
 var FLICKR_API_KEY = '0e20370658ae9b1a32d1f24c552061f8';
-var FLICKR_API_SEARCHTERM = 'guitar'
 
-function getPhotosForSearch(){
-	var url = `${FLICKR_API_URL}${FLICKR_API_KEY}&text=${FLICKR_API_SEARCHTERM}`;
+function getPhotosForSearch(searchTerm){
+	var url = `${FLICKR_API_URL}${FLICKR_API_KEY}&text=${searchTerm}`;
 
 	return(
 		fetch(url)
 		.then(result => result.json())
 		.then(function(jsonResponse){
 			var picsArray = jsonResponse.photos.photo;
-			picsArray.map(function(pic){
+			return picsArray.map(function(pic){
 				var picObj = {
 					thumb: 'https://farm' + pic.farm + '.staticflickr.com/' + pic.server + '/' + pic.id + '_' + pic.secret + '_t.jpg',
 					large: 'https://farm' + pic.farm + '.staticflickr.com/' + pic.server + '/' + pic.id + '_' + pic.secret + '_h.jpg',
 					title: pic.title
 				}
-				return picObj;
+				return createFlickrThumb(picObj);
 			})
-			.forEach(function(picLink){
-				console.log(picLink);
-			})
+			
 		})
 	)
 }
@@ -38,7 +35,7 @@ function createFlickrThumb(photoData){
 
 	link.appendChild(image);
 
-	return link;
+	return (link);
 }
 
 
@@ -50,7 +47,16 @@ var picBtn = document.querySelector('.get-pic-btn');
 var picDisplay = document.querySelector('.pic-display');
 
 
+picForm.addEventListener('submit', function(event){
+	event.preventDefault();
+	var searchTerm = picTerm.value;
+	
+	getPhotosForSearch(searchTerm)
+	.then(arrayOfThumnails => {
+		arrayOfThumnails.forEach(pic => picDisplay.appendChild(pic))
+	})
 
+})
 
 
 
