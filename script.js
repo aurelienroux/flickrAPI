@@ -19,7 +19,6 @@ function getPhotosForSearch(searchTerm){
 				}
 				return createFlickrThumb(picObj);
 			})
-			
 		})
 	)
 }
@@ -50,10 +49,11 @@ var picDisplay = document.querySelector('.pic-display');
 picForm.addEventListener('submit', function(event){
 	event.preventDefault();
 	var searchTerm = picTerm.value;
-	
+
+	picDisplay.innerHTML = '';
 	getPhotosForSearch(searchTerm)
-	.then(arrayOfThumnails => {
-		arrayOfThumnails.forEach(pic => picDisplay.appendChild(pic))
+	.then(arrayOfThumbnails => {
+		arrayOfThumbnails.forEach(pic => picDisplay.appendChild(pic))
 	})
 
 })
