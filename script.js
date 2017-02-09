@@ -6,7 +6,7 @@ var FLICKR_API_SEARCHTERM = 'guitar'
 
 
 
-function myFunction(){
+function getPhotosForSearch(){
 	var url = `${FLICKR_API_URL}${FLICKR_API_KEY}&text=${FLICKR_API_SEARCHTERM}`;
 
 	return(
@@ -24,9 +24,6 @@ function myFunction(){
 				}
 
 				return picObj;
-
-				// var link = 'https://farm' + pic.farm + '.staticflickr.com/' + pic.server + '/' + pic.id + '_' + pic.secret + '_m.jpg';
-				// return link;
 
 			})
 			.forEach(function(picLink){
