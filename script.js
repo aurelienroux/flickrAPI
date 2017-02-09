@@ -42,7 +42,12 @@ function createFlickrThumb(photoData){
 }
 
 
-
+// UI COMPONENTS ////////////////////////////////////
+var app = document.querySelector('#app');
+var picForm = document.querySelector('.pic-form');
+var picTerm = document.querySelector('.pic-term');
+var picBtn = document.querySelector('.get-pic-btn');
+var picDisplay = document.querySelector('.pic-display');
 
 
 
