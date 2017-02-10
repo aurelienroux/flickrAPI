@@ -4,9 +4,9 @@
 }
 
 body{
+  background-color: #EDE7F6;
   margin: 0;
   padding: 0;
-  background-color: #EDE7F6;
 }
 
 #app{
@@ -32,11 +32,12 @@ h1{
   background-color: #B39DDB;
   border: 1px solid #B39DDB;
   border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   margin: 0 auto;
   position: relative;
   top: 25px;
   width: 80%;
-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+}
 
 .pic-term{
   background-color: #B39DDB;
@@ -62,7 +63,6 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
   width: 200px;
   cursor: pointer;
   transition: all 0.5s;
-
 }
 
 .pic-display{
@@ -70,7 +70,6 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
   flex-wrap: wrap;
   justify-content: center;
   margin: 3em auto;
-  max-width: 1100px;
 }
 
 img{
@@ -78,15 +77,14 @@ img{
 }
 
 a{
+  border-top: 10px solid #512DA8;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   flex-basis: 47%;
   margin: 1.5%;
   max-height: 150px;
   overflow: hidden;
-  border-top: 10px solid #512DA8;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
-
 
 @media screen and (min-width: 600px) {
   h1{
@@ -116,5 +114,11 @@ a{
 @media screen and (min-width: 1000px) {
   a{
     flex-basis: 20%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  a{
+    flex-basis: 17%;
   }
 }
