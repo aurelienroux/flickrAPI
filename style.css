@@ -15,42 +15,42 @@ body{
 .main-app{
   background-color: blue;
   border-top: 1em solid green;
+  height: 220px;
   margin: 0;
   padding: 0;
-  height: 220px;
 }
 
 h1{
+  color: #fff;
   font-size: 2em;
   margin: 0;
   padding: 1.5em 0 0em;
-  color: #fff;
 }
 
 .pic-form{
+  background-color: red;
   border: 1px solid gold;
-  width: 80%;
   margin: 0 auto;
   position: relative;
   top: 25px;
-  background-color: red;
+  width: 80%;
 }
 
 .pic-term{
+  background-color: blue;
   border: none;
   border-bottom: 2px solid tomato;
-  background-color: blue;
-  display: block;
   color: #fff;
-  margin: 1em auto;
-  width: 50%;
+  display: block;
   font-size: 1.3em;
+  margin: 1em auto;
+  width: 200px;
 }
 
 .get-pic-btn{
   height: 3em;
-  width: 200px;
   margin: 0 0 2em 0;
+  width: 200px;
 }
 
 .pic-display{
