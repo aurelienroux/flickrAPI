@@ -24,16 +24,13 @@ function createFlickrThumb(photoData){
 	var link = document.createElement('a');
 	link.setAttribute('href', photoData.large);
 	link.setAttribute('target', '_blank');
-
-	var image = document.createElement("img");
-	image.setAttribute('src', photoData.thumb);
-	image.setAttribute('alt', photoData.title);
-
-	link.appendChild(image);
+	
+	link.style.background = `url(${photoData.thumb}) no-repeat center center`
+	link.style.backgroundSize = "cover";
+	link.style.minHeight = "200px";
 
 	return (link);
 }
-
 
 // UI COMPONENTS ////////////////////////////////////
 var app = document.querySelector('#app');
@@ -41,7 +38,6 @@ var picForm = document.querySelector('.pic-form');
 var picTerm = document.querySelector('.pic-term');
 var picBtn = document.querySelector('.get-pic-btn');
 var picDisplay = document.querySelector('.pic-display');
-
 
 picForm.addEventListener('submit', function(event){
 	event.preventDefault();
@@ -52,5 +48,4 @@ picForm.addEventListener('submit', function(event){
 	.then(arrayOfThumbnails => {
 		arrayOfThumbnails.forEach(pic => picDisplay.appendChild(pic))
 	})
-
 })
