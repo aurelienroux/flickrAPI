@@ -13,7 +13,7 @@ function getPhotosForSearch(searchTerm){
 			var picsArray = jsonResponse.photos.photo;
 			return picsArray.map(function(pic){
 				var picObj = {
-					thumb: 'https://farm' + pic.farm + '.staticflickr.com/' + pic.server + '/' + pic.id + '_' + pic.secret + '_t.jpg',
+					thumb: 'https://farm' + pic.farm + '.staticflickr.com/' + pic.server + '/' + pic.id + '_' + pic.secret + '_n.jpg',
 					large: 'https://farm' + pic.farm + '.staticflickr.com/' + pic.server + '/' + pic.id + '_' + pic.secret + '_h.jpg',
 					title: pic.title
 				}
@@ -57,13 +57,3 @@ picForm.addEventListener('submit', function(event){
 	})
 
 })
-
-
-
-
-
-
-
-
-
-
