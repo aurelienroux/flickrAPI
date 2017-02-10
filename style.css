@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+
+.pic-display{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+img{
+  width: 100%;
+}
+
+a{
+  flex-basis: 47%;
+  margin: 1.5%;
+  max-height: 150px;
+  overflow: hidden;
+}
+#app{
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  a{
+    flex-basis: 30%;
+    max-height: 250px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  a{
+    flex-basis: 20%;
+  }
+}
