@@ -17,13 +17,23 @@ body{
   border-top: 1em solid green;
   margin: 0;
   padding: 0;
+  height: 220px;
 }
 
 h1{
   font-size: 2em;
   margin: 0;
-  padding: 1.5em 0 1em;
+  padding: 1.5em 0 0em;
   color: #fff;
+}
+
+.pic-form{
+  border: 1px solid gold;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: 25px;
+  background-color: red;
 }
 
 .pic-term{
@@ -38,14 +48,16 @@ h1{
 }
 
 .get-pic-btn{
-  height: 4em;
+  height: 3em;
+  width: 200px;
+  margin: 0 0 2em 0;
 }
 
 .pic-display{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1em  auto;
+  margin: 2em auto;
   max-width: 1100px;
 }
 
