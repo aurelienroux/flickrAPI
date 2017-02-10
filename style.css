@@ -22,7 +22,7 @@ body{
 }
 
 h1{
-  color: #fff;
+  color: #EDE7F6;
   font-size: 2em;
   margin: 0;
   padding: 1.5em 0 0em;
@@ -41,8 +41,8 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
 .pic-term{
   background-color: #B39DDB;
   border: none;
-  border-bottom: 2px solid #311B92;
-  color: #311B92;
+  border-bottom: 2px solid #673ab7;
+  color: #651FFF;
   display: block;
   font-size: 1em;
   height: 2em;
@@ -52,10 +52,10 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
 }
 
 .get-pic-btn{
-  background-color: #311B92;
+  background-color: #673ab7;
   border: none;
   border-radius: 5px;
-  color: #fff;
+  color: #EDE7F6;
   height: 2em;
   font-size: 1em;
   margin-bottom: 1.5em;
@@ -79,23 +79,31 @@ a{
   margin: 1.5%;
   max-height: 150px;
   overflow: hidden;
-  border-top: 10px solid #311B92;
+  border-top: 10px solid #512DA8;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
+
 @media screen and (min-width: 600px) {
-  a{
-    flex-basis: 30%;
-    max-height: 250px;
-  }
   h1{
     font-size: 3em;
     padding: 0.75em 0 0;
   }
 
   .pic-form{
-
     max-width: 500px;
   }
+  
+  a{
+    flex-basis: 30%;
+    max-height: 250px;
+  }
+
+  a:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
 }
 
 @media screen and (min-width: 1000px) {
