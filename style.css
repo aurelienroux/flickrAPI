@@ -39,17 +39,19 @@ h1{
 .pic-term{
   background-color: blue;
   border: none;
-  border-bottom: 2px solid tomato;
+  border-bottom: 2px solid gold;
   color: #fff;
   display: block;
-  font-size: 1.3em;
-  margin: 1em auto;
+  font-size: 1em;
+  height: 2em;
+  margin: 1.5em auto 0.75em;
   width: 200px;
 }
 
 .get-pic-btn{
-  height: 3em;
-  margin: 0 0 2em 0;
+  height: 2em;
+  font-size: 1em;
+  margin-bottom: 1.5em;
   width: 200px;
 }
 
