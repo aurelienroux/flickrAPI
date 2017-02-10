@@ -57,12 +57,12 @@ h1{
   border: none;
   border-radius: 5px;
   color: #EDE7F6;
+  cursor: pointer;
   height: 2em;
   font-size: 1em;
   margin-bottom: 1.5em;
-  width: 200px;
-  cursor: pointer;
   transition: all 0.5s;
+  width: 200px;
 }
 
 .pic-display{
