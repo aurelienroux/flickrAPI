@@ -3,8 +3,37 @@
   font-family: "Roboto", sans-serif;
 }
 
+body{
+  margin: 0;
+  padding: 0;
+}
+
+#app{
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-app{
+  background-color: blue;
+  border-top: 1em solid green;
+  margin: 0;
+  padding: 0;
+}
+
 h1{
   font-size: 2em;
+  margin: 0;
+  padding: 1.5em 0 1em;
+  color: #fff;
+}
+
+.pic-term{
+  border: 1px solid tomato;
+  display: block;
+  margin: 1em auto;
+  width: 50%;
+  font-size: 1.3em;
 }
 
 .pic-display{
@@ -22,11 +51,6 @@ a{
   margin: 1.5%;
   max-height: 150px;
   overflow: hidden;
-}
-#app{
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
 }
 
 @media screen and (min-width: 600px) {
