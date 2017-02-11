@@ -32,19 +32,19 @@ function createFlickrThumb(photoData){
 }
 
 // UI COMPONENTS ////////////////////////////////////
-var app = document.querySelector('#app');
-var picForm = document.querySelector('.pic-form');
-var picTerm = document.querySelector('.pic-term');
-var picBtn = document.querySelector('.get-pic-btn');
-var picDisplay = document.querySelector('.pic-display');
+var app = $('#app');
+var picForm = app.find('.pic-form');
+var picTerm = app.find('.pic-term');
+var picBtn = app.find('.get-pic-btn');
+var picDisplay = app.find('.pic-display');
 
-picForm.addEventListener('submit', function(event){
+picForm.on('submit', function(event){
 	event.preventDefault();
 	var searchTerm = picTerm.value;
 
 	picDisplay.innerHTML = '';
 	getPhotosForSearch(searchTerm)
 	.then(arrayOfThumbnails => {
-		arrayOfThumbnails.forEach(pic => picDisplay.appendChild(pic))
+		arrayOfThumbnails.forEach(pic => picDisplay.append(pic))
 	})
 })
