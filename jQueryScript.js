@@ -42,7 +42,7 @@ picForm.on('submit', function(event){
 	event.preventDefault();
 	var searchTerm = picTerm.value;
 
-	picDisplay.innerHTML = '';
+	picDisplay.html('');
 	getPhotosForSearch(searchTerm)
 	.then(arrayOfThumbnails => {
 		arrayOfThumbnails.forEach(pic => picDisplay.append(pic))
