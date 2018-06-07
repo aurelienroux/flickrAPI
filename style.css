@@ -1,124 +1,128 @@
-*{
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+:root {
+    --bg-white: #EDE7F6;
+    --purple-heart: #673ab7;
+    --daisy-bush: #512DA8;
+    --cold-purple: #b39ddb;
+    --jacksons-purple: #311B92;
 }
 
-body{
-  background-color: #EDE7F6;
-  margin: 0;
-  padding: 0;
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
-#app{
-  text-align: center;
+body {
+    background-color: var(--bg-white);
+    margin: 0;
+    padding: 0;
 }
 
-.main-app{
-  background-color: #673ab7;
-  border-top: 1em solid #512DA8;
-  height: 220px;
-  margin: 0;
-  padding: 0;
+#app {
+    text-align: center;
 }
 
-h1{
-  color: #EDE7F6;
-  font-size: 2em;
-  margin: 0;
-  padding: 1.5em 0 0em;
+.main-app {
+    background-color: var(--purple-heart);
+    border-top: 1em solid var(--daisy-bush);
+    height: 220px;
+    margin: 0;
+    padding: 0;
 }
 
-.pic-form{
-  background-color: #B39DDB;
-  border: 1px solid #B39DDB;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  margin: 0 auto;
-  position: relative;
-  top: 25px;
-  width: 80%;
+h1 {
+    color: var(--bg-white);
+    font-size: 2em;
+    margin: 0;
+    padding: 1.5em 0 0em;
 }
 
-.pic-term{
-  background-color: #B39DDB;
-  border: none;
-  border-bottom: 2px solid #673ab7;
-  color: #651FFF;
-  display: block;
-  font-size: 1em;
-  height: 2em;
-  margin: 1.5em auto 0.75em;
-  text-align: center;
-  width: 200px;
+.pic-form {
+    background-color: var(--cold-purple);
+    border: 1px solid var(--cold-purple);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin: 0 auto;
+    position: relative;
+    top: 25px;
+    width: 80%;
 }
 
-.get-pic-btn{
-  background-color: #673ab7;
-  border: none;
-  border-radius: 5px;
-  color: #EDE7F6;
-  cursor: pointer;
-  height: 2em;
-  font-size: 1em;
-  margin-bottom: 1.5em;
-  transition: all 0.5s;
-  width: 200px;
+.pic-term {
+    background-color: var(--cold-purple);
+    border: none;
+    border-bottom: 2px solid var(--purple-heart);
+    color: #651FFF;
+    display: block;
+    font-size: 1em;
+    height: 2em;
+    margin: 1.5em auto 0.75em;
+    text-align: center;
+    width: 200px;
 }
 
-.pic-display{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 3em auto;
+.get-pic-btn {
+    background-color: var(--purple-heart);
+    border: none;
+    border-radius: 5px;
+    color: var(--bg-white);
+    cursor: pointer;
+    height: 2em;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+    transition: all 0.5s;
+    width: 200px;
 }
 
-img{
-  width: 100%;
+.pic-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3em auto;
 }
 
-a{
-  border-top: 10px solid #512DA8;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  flex-basis: 47%;
-  margin: 1.5%;
-  max-height: 150px;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+img {
+    width: 100%;
+}
+
+a {
+    border-top: 10px solid var(--daisy-bush);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    flex-basis: 47%;
+    margin: 1.5%;
+    max-height: 150px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
 @media screen and (min-width: 600px) {
-  h1{
-    font-size: 3em;
-    padding: 0.75em 0 0;
-  }
-
-  .pic-form{
-    max-width: 500px;
-  }
-
-  .get-pic-btn:hover{
-    background-color: #311B92;
-    transition: all 0.5s;
-  }
-
-  a{
-    flex-basis: 30%;
-    max-height: 250px;
-  }
-
-  a:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
+    h1 {
+        font-size: 3em;
+        padding: 0.75em 0 0;
+    }
+    .pic-form {
+        max-width: 500px;
+    }
+    .get-pic-btn:hover {
+        background-color: var(--jacksons-purple);
+        transition: all 0.5s;
+    }
+    a {
+        flex-basis: 30%;
+        max-height: 250px;
+    }
+    a:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
 }
 
 @media screen and (min-width: 1000px) {
-  a{
-    flex-basis: 20%;
-  }
+    a {
+        flex-basis: 20%;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-  a{
-    flex-basis: 17%;
-  }
+    a {
+        flex-basis: 17%;
+    }
 }
